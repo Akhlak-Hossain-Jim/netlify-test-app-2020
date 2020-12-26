@@ -1,0 +1,120 @@
+.home {
+    overflow: hidden;
+    height: 100vh;
+    background-color: black;
+
+    .home__child {
+        height: 100vh;
+        display: grid;
+        align-content: center !important;
+        font-weight: bolder !important;
+        color: red;
+        padding-left: 100px;
+        position: absolute;
+
+        @media screen and (max-width: 768px) {
+            padding-left: 10px !important;
+        }
+
+        @media screen and (max-width: 368px) {
+            padding-left: 10px !important;
+        }
+
+        div {
+            @media screen and (max-width: 768px) {
+                height: 80px;
+                margin-bottom: 40px;
+                padding-left: 30px !important;
+            }
+
+            @media screen and (max-width: 368px) {
+                height: 50px !important;
+                padding-left: 10px !important;
+            }
+
+            span,
+            a {
+                font-size: 8rem !important;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 80px !important;
+                    padding-left: 30px !important;
+                }
+
+                @media screen and (max-width: 368px) {
+                    font-size: 50px !important;
+                    padding-left: 10px !important;
+                }
+            }
+        }
+
+
+        a {
+            color: red !important;
+        }
+
+        #compi,
+        #comp-i {
+            color: white !important;
+
+            a {
+                color: white !important;
+            }
+        }
+
+        .home-comps {
+            z-index: 2000 !important;
+            background-color: transparent !important;
+            overflow: hidden;
+
+            &:hover {
+                z-index: 200;
+                padding-left: 20px;
+                animation: from-left .7s !important;
+
+                @keyframes from-left {
+                    from {
+                        margin-left: 5%;
+                    }
+
+                    to {
+                        margin-left: 0%;
+                    }
+                }
+            }
+        }
+
+        .hidden-i {
+            display: none !important;
+        }
+    }
+
+    .home-side-img {
+        z-index: -1 !important;
+        width: auto;
+        height: 100vh !important;
+        float: right;
+        mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0));
+    }
+
+    .hidden-i {
+        display: none !important;
+    }
+    #resp-btm-txt {
+        color: #ffffff;
+        position: fixed;
+        top: 85vh;
+        left: 40vw;
+        font-size: 30px;
+        font-weight: 800;
+        @media screen and (max-width: 768px) {
+            &:before{
+                color: #ffffff;
+                content: "Tap anywhere";
+            }
+        }
+        @media screen and (max-width: 368px) {
+            left: 25vw !important;
+        }
+    }
+}
